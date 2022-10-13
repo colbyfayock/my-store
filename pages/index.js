@@ -23,9 +23,11 @@ export default function Home({ shipping }) {
         <Container>
           <h1 className={styles.homeTitle}>Space Jelly Shop</h1>
           <p className={styles.homeShipping}>
-            ${ shipping.rate.toFixed(2) } Flat Rate Shipping
+            $<span className="shipping-rate">{ shipping.rate.toFixed(2) }</span> Flat Rate Shipping
             <br/>
-            <span className={styles.homeShippingNote}>when shipping to { shipping.country }</span>
+            <span className={styles.homeShippingNote}>
+              when shipping to <span className="shipping-country">{ shipping.country }</span>
+            </span>
           </p>
         </Container>
       </Section>
@@ -54,7 +56,7 @@ export default function Home({ shipping }) {
 export async function getStaticProps() {
   return {
     props: {
-      shipping: shippingRates.find(({ country }) => country === 'US')
+      shipping: shippingRates.find(({ country }) => country === 'CA')
     }
   }
 }
