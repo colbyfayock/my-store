@@ -2,7 +2,7 @@
 
 Demo for tutorial
 
-🚀 See Demo: Coming soon...
+🚀 See Demo: https://my-spacejelly-store.netlify.app
 
 📝 Article: https://spacejelly.dev
 
